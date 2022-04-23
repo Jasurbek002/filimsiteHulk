@@ -1,118 +1,11 @@
-// .then(res => {
 
-// }, err => {
-
-// })
-
-// function waitTwoSecond(){
-//     console.log("Funksiya ishlashni boshladi")
-
-// function makeFullname(name, lastname, middlename) {
-//     return `${lastname} ${name} ${middlename}`
-// }
-
-// function getUserData() {
-//     let user = null
-//     const getUserPromise = new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             console.log("2s dan so'ng")
-//             const date = Date.now()
-//             if (date % 2 === 0) {
-//                 user = {
-//                     name: "Alex",
-//                     surname: "Doe",
-//                     middlename: "Alekseyevich"
-//                 }
-//                 resolve(user)
-//             }
-//             reject("Kutilmagan xato")
-//         }, 2000)
-//     })
-//     return getUserPromise
-// }
-// const getUserPromise = getUserData()
-// const samplePromise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve(14)
-//     }, 3000)
-// })
-
-// fetch().then(res => res.json()).th
-
-// getUserPromise
-//     .then(user => { return JSON.stringify(user) })
-//     .then(res => {
-//         console.log(res)
-//     })
-//     .catch(err => {
-//         console.log(err)
-//     })
-
-// async function logger(){
-//     try {
-//         const user = await getUserData()
-//         if(user.name !== 'John')throw new Error("Foydalanuvhi nomi xato")
-
-//         console.log(user)
-//     } catch (error) {
-//         console.log(error.message)
-
-//     }
-// }
-
-// logger()
-
-// .then((res) => {
-//     console.log(makeFullname(res.name, res.surname, res.middlename))
-// })
-// .catch(err => {
-//     console.log(err)
-// })
-
-// Promise.any([getUserPromise, samplePromise])
-// .then(results => {
-//     console.log(results)
-// })
-
-
-// .finally(() => {
-//     console.log("Backendga so'rov jo'natish tugatildi")
-// })
-
-// const newPromise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         console.log("2s dan so'ng")
-//         const user = {
-//             name:"John",
-//             surname:"Doe",
-//             middlename:"Alekseyevich"
-//         }
-//         resolve(user)
-//     }, 2000)
-// })
-// newPromise
-//     .then((res) => {
-//         console.log("Amal muvaffaqiyatli bajarildi")
-//         console.log(makeFullname(res.name, res.surname, res.middlename))
-//     })
-//     .catch(err => {
-//         console.log("Amal muvaffaqiyatli bajarilmadi")
-//         console.log(err)
-//     })
-
-
-//     return
-// }
-
-
-// DOM Elements
 var movieItemTemplate = document.getElementById('movie-card').content
 var movieListEl = document.getElementById('movie-list')
 var searchInputEl = document.getElementById('search-input')
 var searchFormEl = document.getElementById('search-form')
 
 var loaderEl = document.querySelector('#loader')
-// Api actions
+
 const API_KEY = '5f992696'
 
 async function getMovies(search = "hulk", pageNumber = 1) {
@@ -147,7 +40,7 @@ paginationPrevEl.addEventListener('click', event => {
         currentPage--
     }
 })
-// render functions
+
 async function renderMovies(node, page =1) {
         loaderEl.classList.add('loader__show')
         let response
